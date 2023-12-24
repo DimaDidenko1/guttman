@@ -5,7 +5,7 @@ data_pattern = [
 
 
 def apply_to_file(file_path):#function which write to file text and pattern
-    r0 = len("Oleksandr")#nameLength
+    r0 = len("Dima")#nameLength
     file_size = os.path.getsize(file_path)
     with open(file_path, 'rb+') as file:
         for i in range(0,4):#a cycle of steps 1-4
@@ -21,7 +21,7 @@ def apply_to_file(file_path):#function which write to file text and pattern
             file.flush()
             file.seek(0)
         for i in range(0,4): # a cycle of steps 31 - 35
-            random_pattern = (6*r0+223) % 253
+            random_pattern = (3*r0+17) % 253
             r0 = random_pattern
             write_pattern(file, file_size, random_pattern)
             file.flush()
